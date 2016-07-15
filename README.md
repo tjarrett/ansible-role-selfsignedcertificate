@@ -39,13 +39,19 @@ None.
       vars_files:
         - vars/main.yml
       roles:
-        - { role: geerlingguy.apache }
+        - { role: tjarrett.selfsignedcertificate }
 
 *Inside `vars/main.yml`*:
 
-    apache_listen_port: 8080
-    apache_vhosts:
-      - {servername: "example.com", documentroot: "/var/www/vhosts/example_com"}
+    apache_listen_port: 
+    - {
+        filename: mysite.dev,
+        country: US,
+        state: Maryland,
+        locality: Baltimore,
+        organization: My new Site,
+        domain: mysite.dev
+      }
 
 ## License
 
