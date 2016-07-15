@@ -43,7 +43,7 @@ None.
 
 *Inside `vars/main.yml`*:
 
-    apache_listen_port: 
+    selfsignedcertificates: 
     - {
         filename: mysite.dev,
         country: US,
